@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <section class="header">
+        <div class="container">
+            <div class="header_menu">
+                <div class="logo">
+                    <a href="@">Travelly</a>
+                </div>
+                <ol class="nav_list">
+                    <li class="nav_item"><a href="@">Туры</a></li>
+                    <li class="nav_item"><a href="@">Акции</a></li>
+                    <li class="nav_item"><a href="@">Контакты</a></li>
+                </ol>
+                <button class="switchBtn">Изменить цвет</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero_info">
+                <h2>Путешествуйте без ограничений</h2>
+                <h3>Начните путешествовать по доступной цене с Travelly. <br>Свяжитесь с нами прямо сейчас</h3>
+                <button class="openingBtn">Забронировать</button>
+            </div>
+            <div class="hero_slaider first-sl visible">
+
+            </div>
+            <div class="hero_slaider second-sl">
+
+            </div>
+            <div class="hero_slaider third-sl">
+
+            </div>
+
+            <div class="modal">
+
+                <div class="icon_close">
+                    <img src="крестик.png" alt="кнопка закрытия">
+                </div>
+
+                <div class="modal_wrapper">
+                    <form action="">
+
+                        <div class="country">
+                            <label for="country">Страна</label><br>
+                            <select name="country" id="country">
+                                <option>Выберите страну...</option>
+                                <option value="italy">Италия</option>
+                                <option value="turkey">Турция</option>
+                                <option value="egypt">Египт</option>
+                            </select>
+                        </div>
+
+                        <div class="date">
+                            <label for="date">Дата заезда</label><br>
+                            <input type="date" name="date" id="date">
+                        </div>
+
+                        <div class="tel">
+                            <label for="tel">Номер телефона</label><br>
+                            <input type="number" name="tel" id="tel">
+                        </div>
+
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="js/modal.js"></script>
+    <script src="js/slaider.js"></script>
+    <script>
+
+        const switchBtn = document.querySelector('.switchBtn');
+        let isDefaultStyle = true;
+
+        switchBtn.addEventListener('click', function () {
+            if (isDefaultStyle) {
+                document.querySelector('link').href = "style2.css";
+            } else {
+                document.querySelector('link').href = "style.css";
+            }
+            isDefaultStyle = !isDefaultStyle;
+        });
+    </script>
+</body>
+
+</html>
